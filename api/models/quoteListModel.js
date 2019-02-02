@@ -12,7 +12,7 @@ const QuoteSchema = new Schema({
     type: String,
     required: 'Please enter the name of the character'
   },
-  quote: {
+  body: {
     type: String,
     required: 'Please enter the quote from the character'
   },
