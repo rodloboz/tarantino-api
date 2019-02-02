@@ -1,0 +1,9 @@
+{
+  "name": "tarantinoApi",
+  "version": "1.0.0",
+  "description": "RESTful Api with quotes from Tarantino movies",
+  "main": "index.js",
+  "repository": "git@github.com:rodloboz/tarantino-api.git",
+  "author": "Rui Freitas <dinnerpartysaboteur@gmail.com>",
+  "license": "MIT"
+}
