@@ -5,5 +5,15 @@
   "main": "index.js",
   "repository": "git@github.com:rodloboz/tarantino-api.git",
   "author": "Rui Freitas <dinnerpartysaboteur@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongoose": "^5.4.9"
+  }
 }
