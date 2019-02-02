@@ -1,10 +1,22 @@
 const express = require('express'),
   app = express(),
   port = process.env.PORT || 3000,
-  mongoose = require('mongoose'),
   Quote = require('./api/models/quoteListModel'),
   bodyParser = require('body-parser');
 
+
+const mongoose = require("mongoose");
+app.use((req, res, next) => {
+  console.log("use for mongoose callback");
+  if (mongoose.connection.readyState) {
+    console.log("if (mongoose.connection.readyState)");
+    next();
+  } else {
+    console.log("else (mongoose.connection.readyState)");
+    require("./mongo")().then(() => next());
+    console.log("else (mongoose.connection.readyState)");
+  }
+});
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/Tarantinodb', {
   useNewUrlParser: true
